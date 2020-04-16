@@ -444,16 +444,16 @@ function getGermanCars(arry) {
 
 
 
-// function carMaker(odo) {
-//  let newVar = {
-//   odometer: odo,
-//   drive: function (distance) {
-//      let newOdo = odo + distance;
-//      return newOdo;
-//    }
-
-//  }
-// }
+function carMaker(odo) {
+ let newVar = {
+  odometer: odo,
+  drive: function (distance) {
+     let newOdo = this.odometer + distance;
+     return this.odometer = newOdo;
+   }
+ }
+ return newVar;
+}
 
 
 
