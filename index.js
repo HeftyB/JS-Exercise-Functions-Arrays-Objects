@@ -350,8 +350,14 @@ function getModelYears(arry) {
 
 
 
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(arry, ID) {
+  
+  for (i = 0; i < arry.length; i++) {
+    let newVar = arry[i]
+    if (newVar.id === ID) {
+      return `This is a ${newVar.car_make} ${newVar.car_model}`;
+    }
+  }
 }
 
 
@@ -373,8 +379,18 @@ function getCarInfoById(/* code here */) {
 
 
 
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(arry, maxYear) {
+  let newArray = [];
+
+  for (i = 0; i < arry.length; i++) {
+    let newVar = arry[i];
+
+    if (newVar.car_year <= maxYear) {
+      newArray.push(newVar);
+    }
+  }
+
+  return newArray;
 }
 
 
@@ -395,8 +411,18 @@ function getOlderCars(/* code here */) {
 
 
 
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(arry) {
+  let newArray = [];
+  
+  for (i = 0; i < arry.length; i++) {
+    console.log(i);
+    let newVar = arry[i];
+    if (newVar.car_make === "Audi" || newVar.car_make === "Mercedes-Benz" || newVar.car_make === "Volkswagen" || newVar.car_make === "BMW") {
+      newArray.push(newVar);
+    }
+  }
+  console.log(newArray);
+  return newArray;
 }
 
 
@@ -418,9 +444,16 @@ function getGermanCars(/* code here */) {
 
 
 
-function carMaker(/* code here */) {
-  /* code here */
-}
+// function carMaker(odo) {
+//  let newVar = {
+//   odometer: odo,
+//   drive: function (distance) {
+//      let newOdo = odo + distance;
+//      return newOdo;
+//    }
+
+//  }
+// }
 
 
 
